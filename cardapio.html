@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LojaJhon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Carrinho.html">
+    <script src="index.js"></script>
+    </head>
+  
+<body>
+    <header><a href="Carrinho.html">carriho</a></header>
+    <h1 class="marca">Jhon Lanchemax</h1>
+        <p>O melhor lanche na porta da sua casa!</p>
+    <h2 class="titulos-cardapio">Cardápio</h2><!--por os laches ao lado-->
+    <h3 class="titulos">Lanches</h3>
+        <ul class="itens-cardapio">
+        <li>Cachorro quente R$ 8,00 (Pão, Salsicha, milho, batata palha e ketchup) </li>
+            <button onclick="adicionarAoCarrinho(8)">Adicionar ao carrinho</button>
+        <li>Hamburguer R$ 10,00 (Pão, carne, ovo, salada e molho)</li>
+            <button onclick="adicionarAoCarrinho(10)">Adicionar ao carrinho</button></ul>
+    <h4 class="titulos">Petiscos</h4>
+            <ul><li>Fritas R$ 6,00</li>
+        <button onclick="adicionarAoCarrinho(6)">Adicionar ao carrinho</button>
+            <li>Doritos R$ 5,00</li>
+        <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button></ul>
+    <h5 class="titulos">Bebidas</h5>      
+        <ul>
+        <li>Guaravita R$ 2,00</li>
+        <button onclick="adicionarAoCarrinho(2)">Adicionar ao carrinho</button>
+        <li>Coca lata R$ 5,00</li>
+        <button onclick="adicionarAoCarrinho(5)">Adicionar ao carrinho</button>
+        </ul>    
+    
+    <h6>
+        <ul id="itensCarrinho"></ul>
+        <p><strong>Total:</strong>R$ <span id="total">0,00</span></p>
+        Confirmar pedido
+    </h6>
+
+    <script>
+        
+let total = 0;// Valor total do carrinho
+const itensCarrinho = [];// Array para armazenar os itens do carrinho
+function adicionarAoCarrinho (preco){    // Função para atualizar a lista de itens no carrinho
+    total += preco;
+
+itensCarrinho.push(preco);//add ao carrinho
+document.getElementById("total").textContent = total.toFixed(2);
+//mostra  o novo total da página
+}
+atualizarCarrinho();
+//atualiza a lista de itens no carrinho
+
+function atualizarCarrinho (){
+    const listaItens= document.getElementById('itensCarrinho');
+    listaItens.innerHTML = '';//limpa lista atual 
+
+    //adiciona itens ao carrinho
+    itensCarrinho.forEach((item,index) => {
+        const li =document.createElement('li');
+        li.textContent= `produto ${index + 1} - R$ ${item.toFixed(2)}`
+        listaItens.appendChild(li);
+
+
+    })
+}
+
+    </script>
+</body>
+</html>
