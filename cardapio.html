@@ -10,8 +10,9 @@
     </head>
   
 <body>
-    <header><a href="Carrinho.html">carriho</a></header>
-    <h1 class="marca">Jhon Lanchemax</h1>
+    <div class="apresentacao">
+    <div class="texto"><header><a href="Carrinho.html">carrinho</a></header>
+    <h1 class="marca">Point dos lanches</h1>
         <p>O melhor lanche na porta da sua casa!</p>
     <h2 class="titulos-cardapio">Cardápio</h2><!--por os laches ao lado-->
     <h3 class="titulos">Lanches</h3>
@@ -38,35 +39,14 @@
         <p><strong>Total:</strong>R$ <span id="total">0,00</span></p>
         Confirmar pedido
     </h6>
+</div>
 
-    <script>
-        
-let total = 0;// Valor total do carrinho
-const itensCarrinho = [];// Array para armazenar os itens do carrinho
-function adicionarAoCarrinho (preco){    // Função para atualizar a lista de itens no carrinho
-    total += preco;
+<img src="fastfood.img/pexels-enginakyurt-2725744.jpg" alt="imagem de lanches" width="700px" height="500px";
 
-itensCarrinho.push(preco);//add ao carrinho
-document.getElementById("total").textContent = total.toFixed(2);
-//mostra  o novo total da página
-}
-atualizarCarrinho();
-//atualiza a lista de itens no carrinho
-
-function atualizarCarrinho (){
-    const listaItens= document.getElementById('itensCarrinho');
-    listaItens.innerHTML = '';//limpa lista atual 
-
-    //adiciona itens ao carrinho
-    itensCarrinho.forEach((item,index) => {
-        const li =document.createElement('li');
-        li.textContent= `produto ${index + 1} - R$ ${item.toFixed(2)}`
-        listaItens.appendChild(li);
-
-
-    })
-}
-
-    </script>
 </body>
 </html>
+<Script>
+console.log ("imagenm de domínio público(https://www.pexels.com/pt-br/procurar/fastfood/)")
+
+
+</Script>
