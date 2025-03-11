@@ -15,3 +15,18 @@ body{
 .titulos-cardapio{
     font-size: 22px;
 }
+
+.apresentacao{
+    display: flex;
+    flex-direction: row
+    ;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.foto{
+    border: 0;
+    padding: 500px;
+}
